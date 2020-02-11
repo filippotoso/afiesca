@@ -64,7 +64,7 @@ class ProtectimItalieMTService extends \SoapClient
   'features' => 1,
 ), $options);
       if (!$wsdl) {
-        $wsdl = 'D:\Projects\crowdm\france\generator/wsdl/SimulateurProtectimItalieMTService.xml';
+        $wsdl = 'D:\efes.to\components\filippo-toso\afiesca\generator/wsdl/SimulateurProtectimItalieMTService.xml';
       }
       parent::__construct($wsdl, $options);
     }
