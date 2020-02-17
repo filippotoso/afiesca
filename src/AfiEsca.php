@@ -8,15 +8,11 @@ use Exception;
 
 class AfiEsca
 {
-    protected $login = null;
-    protected $password = null;
     protected $production = false;
 
-    public function __construct($production = false, $login = null, $password = null, Logger $logger = null)
+    public function __construct($production = false, Logger $logger = null)
     {
         $this->production = $production;
-        $this->login = $login;
-        $this->password = $password;
         $this->logger = $logger;
     }
 
