@@ -11,11 +11,6 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function boot()
     {
-        if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__ . '/../config/config.php' => config_path('afiesca.php'),
-            ], 'config');
-        }
     }
 
     /**
@@ -23,8 +18,6 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'afiesca');
-
         $this->app->singleton('afiesca', function () {
             return new AfiEsca(config('afiesca.login'), config('afiesca.password'));
         });
